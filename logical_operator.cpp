@@ -14,7 +14,7 @@ int main(){
     bool b {false};
     bool c {true};
 	
-	cout << boolalpha; // true / false
+	cout << boolalpha; // true //  false
 	cout << "a : " << a << endl;
 	cout << "b : " << b << endl;
 	cout << "c : " << c << endl;
