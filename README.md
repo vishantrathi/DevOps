@@ -1,6 +1,0 @@
-Hi...
-My name is vishant and I am a student of computer science engineering
-I am learning C++ , the files in this repo are my notes.
-As a beginner there my be some mistakes in code as well as in explanation of some important points(//as comments).
-so,help me to find out those mistakes and resolve. if there are some present in the code.
-THANK YOU SO MUCH........................................................................
