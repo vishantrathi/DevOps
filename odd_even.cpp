@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
-int main(){
+int main()
+{
     int n;
     cout<<"ENTER AN INTERGER:";
     cin>>n;
@@ -9,5 +10,4 @@ int main(){
     else
     cout<<n<<" is odd";
     return 0;
-
 }
