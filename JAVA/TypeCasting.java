@@ -4,9 +4,6 @@ public class TypeCasting {
         float a=25.12f;
         int b = (int)a;
         System.out.println(b);
-        
-
-
     }
     
 }
