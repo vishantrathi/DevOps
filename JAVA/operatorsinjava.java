@@ -17,8 +17,22 @@ public class operatorsinjava {
          */
 
          /*Unary operator
-          * add or subtract the value by one
+          * add or subtract the value by one(increment and decrement operator)
           */
+          int A =10;
+          int B=20;
+          System.out.println(A+B);
+          System.out.println(A-B);
+          System.out.println(A*B);
+          System.out.println(A%B);
+          System.out.println(A/B);
+          System.out.println(++A);
+          System.out.println(--B);
+          System.out.println(B++);
+          System.out.println(A++);
+
+
+         
           
           
     }
