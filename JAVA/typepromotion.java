@@ -19,6 +19,7 @@ public static void main(String args[]){
     double f =25;
     double ans = a+b+c+d;
     System.out.println(ans);
+     
 
     
 
