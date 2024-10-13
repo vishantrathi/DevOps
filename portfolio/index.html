@@ -34,7 +34,7 @@
         onmouseout="this.style.boxShadow = 'none'">
         Play Music
       </p>
-      
+
       <p id="time" style="margin-right: 16px; margin-left: 16px">Time</p>
     </div>
 
@@ -587,10 +587,10 @@
         const differenceMs = currentDate - targetDate;
         const millisecondsPerYear = 365.25 * 24 * 60 * 60 * 1000;
         const yearsWithDecimals = (differenceMs / millisecondsPerYear).toFixed(5);
-        document.getElementById("age").textContent = yearsWithDecimals
-        console.log("age here")
+        document.getElementById("age").textContent = yearsWithDecimals;
+        console.log("age here");
       }
-      getAge()
+      getAge();
       function dragMouseDown(e) {
         e = e || window.event;
         e.preventDefault();
