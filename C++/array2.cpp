@@ -11,6 +11,7 @@ int main(){
     score[6]=17;
     score[7]=18;
     score[8]=19;
+    
     score[9]=20;
     score[10]=21;
     cout<<"score at 0 index is  "<<score[0]<<endl;
