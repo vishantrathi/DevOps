@@ -3,18 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyber Forensics Services</title>
+    <title>ENREACH SOLUTION CYBER FORENSIC SOLUTIONS</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
     <!-- Header Section -->
     <header>
-        <div class="container">
-            <h1>ENRICHSOLUTIONS CYBER FORENSIC SOLUTIONS</h1>
+        <div class="container header-flex">
+            <div class="logo-area">
+                <div class="logo-area-row">
+                    <img src="/Image/logo.png" alt="Enreach Solution Logo" class="logo" />
+                    <span class="brand-title">ENREACH SOLUTION</span>
+                </div>
+                <span class="brand-sub">Cyber Forensic Solutions</span>
+            </div>
             <nav>
-                <ul>
+                <button id="hamburger" class="hamburger" aria-label="Open navigation">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-links" id="nav-menu">
+                    <li><a href="#about">About Us</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#why-choose-us">Why Choose Us</a></li>
+                    <li><a href="#team">Our Team</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -23,10 +35,27 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <div class="container hero-flex">
+            <div class="hero-content">
+                <h2>Uncover the Truth with Expert Digital Forensics</h2>
+                <p>We specialize in digital forensics and cyber fraud investigation. Our team uses cutting-edge technology and innovative methods to uncover the truth in complex cases.</p>
+                <a href="#contact" class="btn">Free Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
         <div class="container">
-            <h2>Uncover the Truth with Expert Digital Forensics</h2>
-            <p>We provide comprehensive digital forensics services to help you investigate and resolve cyber incidents effectively.</p>
-            <a href="#contact" class="btn">Get a Free Consultation</a>
+            <div class="about-card">
+                <h2>About Us</h2>
+                <p><i><b>ENREACH SOLUTION CYBER FORENSIC SOLUTIONS</b></i> specializes in digital forensics and fraud investigations. Our team of experts uses cutting-edge technology and innovative techniques to uncover the truth in complex cases. With years of experience and a deep understanding of the digital world, we are dedicated to providing our clients with the evidence they need to make informed decisions.</p>
+                <p>Whether it's a matter of intellectual property theft, cybercrime, or financial fraud, we have the expertise to uncover the facts and provide solid evidence to support our findings. Our services are designed to be comprehensive, discreet, and reliable, and we are committed to delivering results in a timely and cost-effective manner.</p>
+                <p>At ENREACH SOLUTION, we understand the importance of accuracy and precision in our work. Our team is comprised of highly trained and certified professionals who are dedicated to delivering the highest quality of service. We take pride in our commitment to our clients and the results we deliver to them.</p>
+                <div class="exp-box">
+                    <strong>Collective Experience:</strong> 10+ Years
+                </div>
+            </div>
         </div>
     </section>
 
@@ -34,17 +63,82 @@
     <section id="services" class="services">
         <div class="container">
             <h2>Our Services</h2>
-            <div class="service">
-                <h3>Digital Forensic Examination</h3>
-                <p>Identify and recover data from various devices to uncover evidence of cyber incidents.</p>
-            </div>
-            <div class="service">
-                <h3>Malware Analysis</h3>
-                <p>Analyze malicious software to understand its behavior and impact on your systems.</p>
-            </div>
-            <div class="service">
-                <h3>Legal and Document Support</h3>
-                <p>Provide comprehensive reports and expert testimony to support legal proceedings.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Audio Video Analysis</h3>
+                    <p>Audio and video are digital sources of evidence that can be found at the scene of a crime or with the victim or the accused.</p>
+                    <a class="view-more">View More</a>
+                </div>
+                <div class="service-card">
+                    <h3>Cloud Forensics</h3>
+                    <p>Cloud forensics allows users to conveniently access fully featured applications and development environments for forensic analysis.</p>
+                    <a class="view-more">View More</a>
+                </div>
+                <div class="service-card">
+                    <h3>Computer / MAC Forensic</h3>
+                    <p>Computer forensics is a scientific method of investigation and examination to gather evidence from digital devices or computer networks.</p>
+                    <a class="view-more">View More</a>
+                </div>
+                <div class="service-card">
+                    <h3>Cyber Fraud Investigation</h3>
+                    <p>Cybercrime refers to crimes committed using the internet or other types of computer networks, including hacking, identity theft, and more.</p>
+                    <a class="view-more">View More</a>
+                </div>
+                <div class="service-card">
+                    <h3>Database Forensics</h3>
+                    <p>Database forensics is concerned with the forensic examination of databases and their metadata.</p>
+                    <a class="view-more">View More</a>
+                </div>
+                <div class="service-card">
+                    <h3>Digital Forensic</h3>
+                    <p>Digital forensics involves the preservation, identification, extraction, and documentation of digital data.</p>
+                    <a class="view-more">View More</a>
+                </div>
+                <div class="service-card">
+                    <h3>Disk Forensic</h3>
+                    <p>Disk forensics is the process of recovering data and other important artifacts from storage devices.</p>
+                    <a class="view-more">View More</a>
+                </div>
+                <div class="service-card">
+                    <h3>Email Forensics</h3>
+                    <p>Email forensics involves the analysis and investigation of email communications for evidence.</p>
+                    <a class="view-more">View More</a>
+                </div>
+                <div class="service-card">
+                    <h3>Email Fraud Investigation</h3>
+                    <p>Email fraud investigation includes the collection and forensic analysis of evidence related to email hacking, phishing attacks, and recovery of stolen funds.</p>
+                    <a class="view-more">View More</a>
+                </div>
+                <div class="service-card">
+                    <h3>Malware Forensics</h3>
+                    <p>Malware forensics helps in the investigation, identification, and mitigation of potential threats.</p>
+                    <a class="view-more">View More</a>
+                </div>
+                <div class="service-card">
+                    <h3>Memory Forensics</h3>
+                    <p>Memory forensics refers to the examination of volatile data in a computer's memory dump.</p>
+                    <a class="view-more">View More</a>
+                </div>
+                <div class="service-card">
+                    <h3>Mobile Forensic</h3>
+                    <p>Mobile forensics is concerned with recovering data from electronic mobile devices.</p>
+                    <a class="view-more">View More</a>
+                </div>
+                <div class="service-card">
+                    <h3>Network Forensics</h3>
+                    <p>Network forensics deals with the examination of network traffic and data across a network.</p>
+                    <a class="view-more">View More</a>
+                </div>
+                <div class="service-card">
+                    <h3>Social Media Analysis</h3>
+                    <p>Social media forensics includes the collection, analysis, and storage of information, photos, videos, and other electronic evidence from social media platforms.</p>
+                    <a class="view-more">View More</a>
+                </div>
+                <div class="service-card">
+                    <h3>Wireless Forensics</h3>
+                    <p>Wireless forensics provides tools and techniques to collect data in a wireless traffic environment.</p>
+                    <a class="view-more">View More</a>
+                </div>
             </div>
         </div>
     </section>
@@ -55,10 +149,56 @@
             <h2>Why Choose Us</h2>
             <ul>
                 <li>Expertise in handling complex cyber incidents</li>
-                <li>Certified professionals with extensive experience</li>
+                <li>Certified and experienced professionals</li>
                 <li>Proven track record of successful investigations</li>
                 <li>Comprehensive services from data recovery to legal support</li>
+                <li>Confidentiality and timely delivery guaranteed</li>
             </ul>
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section id="team" class="team-section">
+        <div class="container">
+            <h2>Our Team</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="/Image/team1.jpg" alt="Team Member 1" class="team-photo" />
+                    <h3>Rohit Sharma</h3>
+                    <p>Lead Forensic Analyst</p>
+                    <a href="#" class="team-linkedin" title="LinkedIn" target="_blank">in</a>
+                </div>
+                <div class="team-card">
+                    <img src="/Image/team2.jpg" alt="Team Member 2" class="team-photo" />
+                    <h3>Priya Singh</h3>
+                    <p>Cyber Security Expert</p>
+                    <a href="#" class="team-linkedin" title="LinkedIn" target="_blank">in</a>
+                </div>
+                <div class="team-card">
+                    <img src="/Image/team3.jpg" alt="Team Member 3" class="team-photo" />
+                    <h3>Vikas Mehra</h3>
+                    <p>Malware Analyst</p>
+                    <a href="#" class="team-linkedin" title="LinkedIn" target="_blank">in</a>
+                </div>
+                <div class="team-card">
+                    <img src="/Image/team4.jpg" alt="Team Member 4" class="team-photo" />
+                    <h3>Neha Verma</h3>
+                    <p>Legal Consultant</p>
+                    <a href="#" class="team-linkedin" title="LinkedIn" target="_blank">in</a>
+                </div>
+                <div class="team-card">
+                    <img src="/Image/team5.jpg" alt="Team Member 5" class="team-photo" />
+                    <h3>Arjun Patel</h3>
+                    <p>Network Forensics Specialist</p>
+                    <a href="#" class="team-linkedin" title="LinkedIn" target="_blank">in</a>
+                </div>
+                <div class="team-card">
+                    <img src="/Image/team6.jpg" alt="Team Member 6" class="team-photo" />
+                    <h3>Sneha Gupta</h3>
+                    <p>Cloud Forensics Expert</p>
+                    <a href="#" class="team-linkedin" title="LinkedIn" target="_blank">in</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -66,16 +206,81 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2>Contact Us</h2>
-            <p>If you're facing a cyber incident, our team is here to help. Reach out to us for expert assistance.</p>
+            <p>If you are facing a cyber incident, our team is ready to help you.</p>
             <a href="mailto:contact@cyberforensics.com" class="btn">Email Us</a>
         </div>
     </section>
 
     <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Cyber Forensics Services. All rights reserved.</p>
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col logo-about">
+                <img src="/Image/logo.png" alt="Enreach Solution Logo" class="footer-logo" />
+                <p class="footer-about">ENREACH SOLUTION specializes in digital forensics and fraud investigations. Our team of experts use cutting-edge technology and innovative techniques to uncover the truth in complex cases.</p>
+            </div>
+            <div class="footer-col useful-links">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col contact-info">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><span class="footer-icon">📍</span> Registered Office ABHI MUJ KHUD NAHI PATA</li>
+                    <li><span class="footer-icon">📞</span> +91 1234567890</li>
+                    <li><span class="footer-icon">✉️</span> contact@enreachsolution.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 ENREACH SOLUTION CYBER FORENSIC SOLUTIONS. All Rights Reserved.
+        </div>
+        <!-- Floating Action Buttons -->
+        <div class="footer-fab-group">
+            <a href="tel:+919870170440" class="footer-fab call" title="Call"><span>📞</span></a>
+            <a href="https://wa.me/919870170440" class="footer-fab whatsapp" title="WhatsApp" target="_blank"><span>🟢</span></a>
+            <a href="mailto:contact@enreachsolution.com" class="footer-fab email" title="Email"><span>✉️</span></a>
         </div>
     </footer>
+
+    <script>
+    // Three.js 3D Animation (Rotating Digital Lock)
+    const canvas = document.getElementById('three-canvas');
+    if(canvas) {
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
+        renderer.setSize(220, 220);
+        camera.position.z = 3;
+
+        // 3D Lock (Cylinder + Torus)
+        const geometry = new THREE.CylinderGeometry(0.6, 0.6, 1.2, 32);
+        const material = new THREE.MeshStandardMaterial({ color: 0x1565c0, metalness: 0.7, roughness: 0.2 });
+        const lock = new THREE.Mesh(geometry, material);
+        scene.add(lock);
+        // U-shaped shackle
+        const torusGeo = new THREE.TorusGeometry(0.45, 0.09, 16, 100, Math.PI);
+        const torusMat = new THREE.MeshStandardMaterial({ color: 0xffd600, metalness: 0.8, roughness: 0.3 });
+        const shackle = new THREE.Mesh(torusGeo, torusMat);
+        shackle.position.y = 0.7;
+        scene.add(shackle);
+        // Light
+        const light = new THREE.PointLight(0xffffff, 1, 100);
+        light.position.set(2, 2, 3);
+        scene.add(light);
+        // Animation
+        function animate() {
+            requestAnimationFrame(animate);
+            lock.rotation.y += 0.01;
+            shackle.rotation.z += 0.005;
+            renderer.render(scene, camera);
+        }
+        animate();
+    }
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>
