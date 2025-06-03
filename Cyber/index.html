@@ -13,10 +13,10 @@
         <div class="container header-flex">
             <div class="logo-area">
                 <div class="logo-area-row">
-                    <img src="/Image/logo.png" alt="Enreach Solution Logo" class="logo" />
+                    <img src="./Image/logo.png" alt="Enreach Solution Logo" class="logo" />
                     <span class="brand-title">ENREACH SOLUTION</span>
                 </div>
-                <span class="brand-sub">Cyber Forensic Solutions</span>
+                <!-- <span class="brand-sub">Cyber Forensic Solutions</span> -->
             </div>
             <nav>
                 <button id="hamburger" class="hamburger" aria-label="Open navigation">
@@ -28,6 +28,7 @@
                     <li><a href="#why-choose-us">Why Choose Us</a></li>
                     <li><a href="#team">Our Team</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="login.html">Admin LogIn</a></li>
                 </ul>
             </nav>
         </div>
@@ -35,26 +36,30 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container hero-flex">
-            <div class="hero-content">
-                <h2>Uncover the Truth with Expert Digital Forensics</h2>
-                <p>We specialize in digital forensics and cyber fraud investigation. Our team uses cutting-edge technology and innovative methods to uncover the truth in complex cases.</p>
-                <a href="#contact" class="btn">Free Consultation</a>
-            </div>
-        </div>
-    </section>
+  <div class="video-container">
+    <video autoplay muted loop playsinline>
+      <source src="./Image/854322-hd_1280_720_25fps.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="container hero-flex hero-overlay">
+    <div class="hero-content">
+      <h2>Uncover the Truth with Expert Digital Forensics</h2>
+      <p>We specialize in digital forensics and cyber fraud investigation. Our team uses cutting-edge technology and innovative methods to uncover the truth in complex cases.</p>
+      <a href="#contact" class="btn">Free Consultation</a>
+    </div>
+  </div>
+</section>
 
     <!-- About Us Section -->
     <section id="about" class="about">
-        <div class="container">
+        <div class="container about-flex">
             <div class="about-card">
                 <h2>About Us</h2>
-                <p><i><b>ENREACH SOLUTION CYBER FORENSIC SOLUTIONS</b></i> specializes in digital forensics and fraud investigations. Our team of experts uses cutting-edge technology and innovative techniques to uncover the truth in complex cases. With years of experience and a deep understanding of the digital world, we are dedicated to providing our clients with the evidence they need to make informed decisions.</p>
-                <p>Whether it's a matter of intellectual property theft, cybercrime, or financial fraud, we have the expertise to uncover the facts and provide solid evidence to support our findings. Our services are designed to be comprehensive, discreet, and reliable, and we are committed to delivering results in a timely and cost-effective manner.</p>
-                <p>At ENREACH SOLUTION, we understand the importance of accuracy and precision in our work. Our team is comprised of highly trained and certified professionals who are dedicated to delivering the highest quality of service. We take pride in our commitment to our clients and the results we deliver to them.</p>
-                <div class="exp-box">
-                    <strong>Collective Experience:</strong> 10+ Years
-                </div>
+                <p><b>ENREACH SOLUTION</b> provides expert digital forensics and fraud investigation services. Our certified team uses advanced technology to uncover evidence in cybercrime, intellectual property theft, and financial fraud cases.</p>
+                <p>We deliver reliable, discreet, and timely results, ensuring accuracy and professionalism for every client.</p>
+            </div>
+            <div class="about-photo">
+                <img src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&w=600&q=80" alt="Team Meeting" />
             </div>
         </div>
     </section>
@@ -64,6 +69,7 @@
         <div class="container">
             <h2>Our Services</h2>
             <div class="services-grid">
+
                 <div class="service-card">
                     <h3>Audio Video Analysis</h3>
                     <p>Audio and video are digital sources of evidence that can be found at the scene of a crime or with the victim or the accused.</p>
@@ -84,6 +90,11 @@
                     <p>Cybercrime refers to crimes committed using the internet or other types of computer networks, including hacking, identity theft, and more.</p>
                     <a class="view-more">View More</a>
                 </div>
+
+                <div style="text-align: center; margin-top: 20px;">
+                <button id="toggle-services-btn" class="view-more">Show More</button>
+                </div>
+
                 <div class="service-card">
                     <h3>Database Forensics</h3>
                     <p>Database forensics is concerned with the forensic examination of databases and their metadata.</p>
@@ -163,41 +174,46 @@
             <h2>Our Team</h2>
             <div class="team-grid">
                 <div class="team-card">
-                    <img src="/Image/team1.jpg" alt="Team Member 1" class="team-photo" />
-                    <h3>Rohit Sharma</h3>
-                    <p>Lead Forensic Analyst</p>
-                    <a href="#" class="team-linkedin" title="LinkedIn" target="_blank">in</a>
-                </div>
-                <div class="team-card">
-                    <img src="/Image/team2.jpg" alt="Team Member 2" class="team-photo" />
-                    <h3>Priya Singh</h3>
-                    <p>Cyber Security Expert</p>
+                    <img src="/Image/team4.jpg" alt="Team Member 4" class="team-photo" />
+                    <h3>Shubham Saini</h3>
+                    <p>Sr. Digital Forensic Examiner
+                     Team Lead & Manager</p>
                     <a href="#" class="team-linkedin" title="LinkedIn" target="_blank">in</a>
                 </div>
                 <div class="team-card">
                     <img src="/Image/team3.jpg" alt="Team Member 3" class="team-photo" />
-                    <h3>Vikas Mehra</h3>
-                    <p>Malware Analyst</p>
+                    <h3>Gourav Kumar</h3>
+                    <p>Sr. Digital & Financial Forensic
+                     Examiner & Manager</p>
                     <a href="#" class="team-linkedin" title="LinkedIn" target="_blank">in</a>
                 </div>
                 <div class="team-card">
-                    <img src="/Image/team4.jpg" alt="Team Member 4" class="team-photo" />
-                    <h3>Neha Verma</h3>
-                    <p>Legal Consultant</p>
+                    <img src="./Image/piyush.jpg" alt="Team Member 1" class="team-photo" />
+                    <h3>Piyush Rawat</h3>
+                    <p>Sr. Digital Forensic Examiner </p>
                     <a href="#" class="team-linkedin" title="LinkedIn" target="_blank">in</a>
                 </div>
+                <div class="team-card">
+                    <img src="./Image/varun.jpg" alt="Team Member 2" class="team-photo" />
+                    <h3>Varun Saini</h3>
+                    <p>Sr. Digital Forensic Examiner
+                    Manager</p>
+                    <a href="#" class="team-linkedin" title="LinkedIn" target="_blank">in</a>
+                </div>
+                
+                
                 <div class="team-card">
                     <img src="/Image/team5.jpg" alt="Team Member 5" class="team-photo" />
-                    <h3>Arjun Patel</h3>
-                    <p>Network Forensics Specialist</p>
+                    <h3>Vishant Rathi</h3>
+                    <p>Intern</p>
                     <a href="#" class="team-linkedin" title="LinkedIn" target="_blank">in</a>
                 </div>
-                <div class="team-card">
+                <!-- <div class="team-card">
                     <img src="/Image/team6.jpg" alt="Team Member 6" class="team-photo" />
                     <h3>Sneha Gupta</h3>
                     <p>Cloud Forensics Expert</p>
                     <a href="#" class="team-linkedin" title="LinkedIn" target="_blank">in</a>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -207,7 +223,7 @@
         <div class="container">
             <h2>Contact Us</h2>
             <p>If you are facing a cyber incident, our team is ready to help you.</p>
-            <a href="mailto:contact@cyberforensics.com" class="btn">Email Us</a>
+            <a href="mailto:contact.enreachsolution@gmail.com" class="btn">Email Us</a>
         </div>
     </section>
 
@@ -215,7 +231,7 @@
     <footer class="main-footer">
         <div class="footer-container">
             <div class="footer-col logo-about">
-                <img src="/Image/logo.png" alt="Enreach Solution Logo" class="footer-logo" />
+                <img src="Image/logo.png" alt="Enreach Solution Logo" class="footer-logo" />
                 <p class="footer-about">ENREACH SOLUTION specializes in digital forensics and fraud investigations. Our team of experts use cutting-edge technology and innovative techniques to uncover the truth in complex cases.</p>
             </div>
             <!-- <div class="footer-col useful-links">
@@ -229,58 +245,32 @@
             <div class="footer-col contact-info">
                 <h3>Contact Info</h3>
                 <ul>
-                    <li><span class="footer-icon">📍</span> Registered Office ABHI MUJ KHUD NAHI PATA</li>
-                    <li><span class="footer-icon">📞</span> +91 1234567890</li>
-                    <li><span class="footer-icon">✉️</span> contact@enreachsolution.com</li>
+                    <li><span class="footer-icon">📍</span> Registered Office: Unit NO.1505, Astralis Supernova Sector-94, Gurugram, Noida, 201301</li>
+                    <li><span class="footer-icon">📞</span> +91 8218848146</li>
+                    <li><span class="footer-icon">✉️</span> contact.enreachsolution@gmail.com</li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
             &copy; 2025 ENREACH SOLUTION CYBER FORENSIC SOLUTIONS. All Rights Reserved.
+            <br>
+           <div > Developed <span class="footer-heart" ></span> by <a href="https://github.com/vishantrathi" >QuberaSystems</a></div>
         </div>
         <!-- Floating Action Buttons -->
         <div class="footer-fab-group">
-            <a href="tel:+911234567890" class="footer-fab call" title="Call"><span>📞</span></a>
-            <a href="https://wa.me/1234567890" class="footer-fab whatsapp" title="WhatsApp" target="_blank"><span>🟢</span></a>
-            <a href="mailto:contact@enreachsolution.com" class="footer-fab email" title="Email"><span>✉️</span></a>
+            <a href="tel:+918218848146" class="footer-fab call" title="Call"> <span>
+                    <img src="https://img.icons8.com/?size=100&id=ATc0iViHX2IC&format=png&color=000000" alt="Call Logo" style="width:24px;height:24px;display:block;" />
+                </span></a>
+            <a href="https://wa.me/+918218848146" class="footer-fab whatsapp" title="WhatsApp" target="_blank">
+                <span>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" style="width:24px;height:24px;display:block;" />
+                </span>
+            </a>
+            <a href="mailto:contact.enreachsolution@gmail.com" class="footer-fab email" title="Email">                <span>
+                    <img src="https://img.icons8.com/?size=100&id=LPcVDft9Isqt&format=png&color=000000" alt="Email Logo" style="width:24px;height:24px;display:block;" />
+                </span></a>
         </div>
     </footer>
-
-    <script>
-    // Three.js 3D Animation (Rotating Digital Lock)
-    const canvas = document.getElementById('three-canvas');
-    if(canvas) {
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
-        renderer.setSize(220, 220);
-        camera.position.z = 3;
-
-        // 3D Lock (Cylinder + Torus)
-        const geometry = new THREE.CylinderGeometry(0.6, 0.6, 1.2, 32);
-        const material = new THREE.MeshStandardMaterial({ color: 0x1565c0, metalness: 0.7, roughness: 0.2 });
-        const lock = new THREE.Mesh(geometry, material);
-        scene.add(lock);
-        // U-shaped shackle
-        const torusGeo = new THREE.TorusGeometry(0.45, 0.09, 16, 100, Math.PI);
-        const torusMat = new THREE.MeshStandardMaterial({ color: 0xffd600, metalness: 0.8, roughness: 0.3 });
-        const shackle = new THREE.Mesh(torusGeo, torusMat);
-        shackle.position.y = 0.7;
-        scene.add(shackle);
-        // Light
-        const light = new THREE.PointLight(0xffffff, 1, 100);
-        light.position.set(2, 2, 3);
-        scene.add(light);
-        // Animation
-        function animate() {
-            requestAnimationFrame(animate);
-            lock.rotation.y += 0.01;
-            shackle.rotation.z += 0.005;
-            renderer.render(scene, camera);
-        }
-        animate();
-    }
-    </script>
     <script src="script.js"></script>
 </body>
 </html>

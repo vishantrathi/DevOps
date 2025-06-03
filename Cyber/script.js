@@ -14,4 +14,14 @@ if (hamburger && navMenu) {
             navMenu.classList.remove('open');
         });
     });
+    document.addEventListener("DOMContentLoaded", function () {
+    const servicesGrid = document.querySelector(".services-grid");
+    const toggleBtn = document.getElementById("toggle-services-btn");
+
+    toggleBtn.addEventListener("click", function () {
+        servicesGrid.classList.toggle("show-more");
+        toggleBtn.textContent = servicesGrid.classList.contains("show-more") ? "Show Less" : "Show More";
+    });
+});
+
 } 

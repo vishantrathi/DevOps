@@ -12,6 +12,9 @@ body {
     background-color: #f4f4f4;
     color: #333;
 }
+html {
+    scroll-behavior: smooth
+}
 
 .container {
     width: 90%;
@@ -20,13 +23,15 @@ body {
 
 /* Header */
 header {
-    background-color: #1a1a1a;
+    background-color:#1a1a1a;
     color: #fff;
     position: sticky;
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 12px rgba(21,101,192,0.08);
-    transition: background 0.3s;
+    /* transition: background 0.3s; */
+    min-height: 90px;
+    transition: min-height 0.3s, padding 0.3s, box-shadow 0.3s;
 }
 
 header h1 {
@@ -53,7 +58,6 @@ header nav ul li a {
 
 /* Hero Section */
 .hero {
-    background: url('/Image/banner.jpg') no-repeat center center/cover;
     color: #fff;
     padding: 60px 0;
     text-align: center;
@@ -96,13 +100,54 @@ header nav ul li a {
     justify-content: center;
     min-width: 240px;
     min-height: 240px;
-    background: linear-gradient(135deg, #232b3a 60%, #1565c0 100%);
+    background: linear-gradient(135deg, #3a3d42 60%, #555555 100%);
     border-radius: 32px;
     box-shadow: 0 8px 40px 0 rgba(21,101,192,0.18), 0 0 0 8px #e3f2fd;
     padding: 18px;
     position: relative;
     z-index: 2;
 }
+
+/* Fullscreen video container */
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90vh;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.video-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+/* hero section takes full screen */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Optional overlay for better readability */
+.hero-overlay {
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.4); /* semi-transparent dark overlay */
+  padding: 2rem;
+  color: #fff;
+  width: 100%;
+}
+
 #three-canvas {
     width: 220px;
     height: 220px;
@@ -114,8 +159,8 @@ header nav ul li a {
     transition: box-shadow 0.3s, border 0.3s;
 }
 .hero-3d:hover #three-canvas {
-    box-shadow: 0 8px 48px 0 #1565c0cc, 0 0 32px 0 #e6000033;
-    border: 3px solid #1565c0;
+    box-shadow: 0 8px 48px 0 #555555, 0 0 32px 0 #e6000033;
+    border: 3px solid #555555;
 }
 
 /* Services Section */
@@ -149,23 +194,33 @@ header nav ul li a {
     padding: 60px 0 40px 0;
     text-align: center;
 }
-.about .about-card {
-    max-width: 700px;
-    margin: 0 auto;
-    background: #fff;
-    border-radius: 22px;
-    box-shadow: 0 6px 32px rgba(21,101,192,0.10);
-    padding: 36px 28px 28px 28px;
-    position: relative;
-    z-index: 1;
-    margin-left: 0;
-    margin-right: auto;
-    text-align: left;
+.about-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: nowrap;
+}
+.about-card {
+    flex: 2 1 350px;
+}
+.about-photo {
+    flex: 1 1   290px;
+    margin-top: 130px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.about-photo img {
+    max-width: 420px;
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(21,101,192,0.10);
+    object-fit: cover;
 }
 .about h2 {
     font-size: 2.5rem;
     margin-bottom: 18px;
-    color: #1565c0;
+    color: #000000;
     position: relative;
     display: inline-block;
 }
@@ -176,11 +231,11 @@ header nav ul li a {
     width: 60px;
     height: 4px;
     border-radius: 2px;
-    background: linear-gradient(90deg, #1565c0 60%, #e60000 100%);
+    background: linear-gradient(90deg, #555555 60%, #e60000 100%);
 }
 .about p {
     font-size: 1.13rem;
-    color: #333;
+    color: #000000;
     margin-bottom: 16px;
     text-align: left;
 }
@@ -191,7 +246,7 @@ header nav ul li a {
     padding: 12px 36px;
     border-radius: 30px;
     font-weight: bold;
-    color: #1565c0;
+    color: #555555;
     box-shadow: 0 2px 8px rgba(21,101,192,0.08);
     font-size: 1.08rem;
 }
@@ -204,23 +259,23 @@ header nav ul li a {
     margin-top: 30px;
 }
 .service-card {
-    background: linear-gradient(135deg, #e3f2fd 60%, #fff 100%);
+    background: linear-gradient(135deg, #e0e0e0 60%, #f5f5f5 100%);
     border-radius: 18px;
     box-shadow: 0 4px 24px rgba(21,101,192,0.10);
     padding: 28px 18px 22px 18px;
     transition: transform 0.2s, box-shadow 0.2s;
     position: relative;
     overflow: hidden;
-    border: 1.5px solid #bbdefb;
+    border: 1.5px solid #555555;
 }
 .service-card:hover {
     transform: translateY(-8px) scale(1.03) rotateZ(-1deg);
     box-shadow: 0 8px 32px rgba(21,101,192,0.18);
-    border-color: #1565c0;
+    border-color: #555555;
 }
 .service-card h3 {
     font-size: 1.3rem;
-    color: #1565c0;
+    color: #555555;
     margin-bottom: 10px;
 }
 .service-card p {
@@ -230,7 +285,7 @@ header nav ul li a {
 }
 .service-card .view-more {
     display: inline-block;
-    background: #1565c0;
+    background: #555555;
     color: #fff;
     padding: 7px 18px;
     border-radius: 20px;
@@ -240,29 +295,48 @@ header nav ul li a {
     cursor: pointer;
 }
 .service-card .view-more:hover {
-    background: #e60000;
+    background: #000000;
 }
 
 /* Why Choose Us Section */
 .why-choose-us {
     background-color: #e6e6e6;
     padding: 40px 0;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    box-sizing: border-box;
+}
+
+.why-choose-us-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 24px;
+    box-sizing: border-box;
+    background: transparent;
 }
 
 .why-choose-us h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .why-choose-us ul {
+    width: 100%;
     max-width: 500px;
     margin: 0 auto;
     text-align: left;
+    padding-left: 24px;
 }
 
 .why-choose-us ul li {
     margin-bottom: 10px;
+    text-align: left;
 }
 
 /* Contact Section */
@@ -310,9 +384,13 @@ footer {
     .hero-3d {
         margin-top: 30px;
     }
-    .about .about-card {
-        margin: 0 auto;
-        text-align: center;
+    .about-flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+    .about-photo {
+        margin-top: 24px;
     }
 }
 
@@ -355,7 +433,7 @@ footer {
 .brand-sub {
     font-size: 1rem;
     color: #fff;
-    background: #1565c0;
+    background: #555555;
     border-radius: 12px;
     padding: 2px 10px;
     margin-left: 68px;
@@ -581,7 +659,7 @@ nav {
     text-align: inherit;
 }
 .footer-col ul li a {
-    color: #2196f3;
+    color: #666666;
     text-decoration: none;
     transition: color 0.2s;
 }
@@ -624,9 +702,9 @@ nav {
     text-decoration: none;
     transition: background 0.2s, transform 0.2s;
 }
-.footer-fab.call { background: #00bfae; }
+.footer-fab.call { background: #ffffff; }
 .footer-fab.whatsapp { background: #25d366; }
-.footer-fab.email { background: #a259e6; }
+.footer-fab.email { background: #fffefe; }
 .footer-fab:hover { transform: scale(1.08); filter: brightness(1.1); }
 
 @media (max-width: 900px) {
@@ -672,7 +750,7 @@ nav {
 }
 .team-section h2 {
     font-size: 2.3rem;
-    color: #1565c0;
+    color: #555555;
     margin-bottom: 32px;
     position: relative;
     display: inline-block;
@@ -684,7 +762,7 @@ nav {
     width: 60px;
     height: 4px;
     border-radius: 2px;
-    background: linear-gradient(90deg, #1565c0 60%, #e60000 100%);
+    background: linear-gradient(90deg, #010101 60%, #e60000 100%);
 }
 .team-grid {
     display: grid;
@@ -709,7 +787,7 @@ nav {
 .team-card:hover {
     transform: translateY(-8px) scale(1.03) rotateZ(-1deg);
     box-shadow: 0 8px 32px rgba(21,101,192,0.18);
-    border-color: #1565c0;
+    border-color: #555555;
 }
 .team-photo {
     width: 90px;
@@ -722,7 +800,7 @@ nav {
 }
 .team-card h3 {
     font-size: 1.18rem;
-    color: #1565c0;
+    color: #555555;
     margin-bottom: 6px;
     margin-top: 0;
 }
@@ -733,7 +811,7 @@ nav {
 }
 .team-linkedin {
     display: inline-block;
-    background: #1565c0;
+    background: #555555;
     color: #fff;
     border-radius: 50%;
     width: 36px;
@@ -747,7 +825,7 @@ nav {
     box-shadow: 0 2px 8px rgba(21,101,192,0.10);
 }
 .team-linkedin:hover {
-    background: #e60000;
+    background: #0A66C2;
 }
 @media (max-width: 700px) {
     .team-section {
@@ -760,3 +838,41 @@ nav {
         padding: 18px 8px 14px 8px;
     }
 }
+
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+    display: block;
+    background: transparent;
+}
+/* Initially hide services beyond the 4th one */
+.service-card:nth-child(n+5) {
+    display: none;
+}
+
+/* When 'show-more' class is added, show all */
+.services-grid.show-more .service-card {
+    display: block;
+}
+
+.view-more {
+    display: inline-block;
+    background: #555555;
+    color: #fff;
+    padding: 7px 18px;
+    border-radius: 20px;
+    font-size: 0.98rem;
+    text-decoration: none;
+    transition: background 0.2s;
+    cursor: pointer;
+    ;
+}
+.view-more:hover {
+    background: #6b6666;
+}
+

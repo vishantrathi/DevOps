@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Dashboard</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2rem; }
+    h1 { color: #333; }
+    button { padding: 0.5rem 1rem; font-size: 1rem; cursor: pointer; }
+    .form-container { margin-top: 20px; }
+    input[type="text"], input[type="file"], textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    textarea {
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to the Admin Dashboard!</h1>
+  <button id="logoutBtn">Logout</button>
+
+  <div class="form-container">
+    <h2>Create New Article</h2>
+    <form id="articleForm">
+      <input type="text" id="title" placeholder="Article Title" required />
+      <input type="file" id="image" accept="image/*" required />
+      <textarea id="content" placeholder="Write your article here..." required></textarea>
+      <button type="submit">Submit Article</button>
+    </form>
+    <p id="submissionMessage" style="color: green;"></p>
+  </div>
+
+  <!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-storage.js"></script>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_PROJECT_ID.appspot.com",
+    appId: "YOUR_APP_ID"
+  };
+  firebase.initializeApp(firebaseConfig);
+
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+  const storage = firebase.storage();
+
+  auth.onAuthStateChanged((user) => {
+    if (!user) {
+      window.location.href = 'login.html';
+    }
+  });
+
+  document.getElementById('logoutBtn').addEventListener('click', () => {
+    auth.signOut().then(() => {
+      window.location.href = 'login.html';
+    });
+  });
+
+  document.getElementById('articleForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const title = document.getElementById('title').value.trim();
+    const image = document.getElementById('image').files[0];
+    const content = document.getElementById('content').value.trim();
+
+    try {
+      // Step 1: Upload image to Firebase Storage
+      const imageRef = storage.ref().child(`articleImages/${Date.now()}_${image.name}`);
+      await imageRef.put(image);
+      const imageUrl = await imageRef.getDownloadURL();
+
+      // Step 2: Save article data to Firestore
+      await db.collection('articles').add({
+        title,
+        content,
+        imageUrl,
+        createdAt: firebase.firestore.FieldValue.serverTimestamp()
+      });
+
+      document.getElementById('submissionMessage').textContent = 'Article submitted successfully!';
+      document.getElementById('articleForm').reset();
+    } catch (error) {
+      console.error('Error:', error);
+      document.getElementById('submissionMessage').textContent = 'Error submitting article.';
+    }
+  });
+</script>
+</body>
+</html>
